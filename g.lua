@@ -34,10 +34,11 @@ end
 farm()
 game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "full"
 wait(6)
-   for n, m in pairs(game.Workspace.Hives:GetChildren()) do
+    for i, v in pairs(game.Workspace.Hives:GetChildren()) do
         if v.Platform.Top.Username.User.Text == "kegietong" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
                 v.Platform.Top.CFrame * CFrame.new(-4, 0, 0) * CFrame.fromEulerAngles(0, 0, math.rad(90))
         end
     end
-   game.ReplicatedStorage.Remotes.MakeHoney:FireServer()
+    game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
+
