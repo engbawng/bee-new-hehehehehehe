@@ -23,14 +23,8 @@ end
                         wait()     
                         print("f")
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
-                             local tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
-    local clickEvent = tool:FindFirstChild("ClickEvent", true)
-                    if clickEvent then
-                        clickEvent:FireServer()
-                    end
 for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
-                            print("getting")
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) -- End touch
 end
 
