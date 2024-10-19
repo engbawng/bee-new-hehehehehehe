@@ -3,11 +3,10 @@ local windowz = uilibrary:CreateWindow("UI Library", "BangLaptop", true)
 
 local Page1 = windowz:CreatePage("Home")
 local Page2 = windowz:CreatePage("Main")
-local field = "Black Berry"
+local field = "Blackberry Field"
 local Section1 = Page2:CreateSection("Farm")
 Section1:CreateToggle("Farming", {Toggled=false , Description = false}, function(Value)
 while Value do
-local field = "Blackberry Field"
 game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "work?"
 function farm()
   repeat
@@ -74,7 +73,6 @@ end)
 local fields ={}
 for i,v in pairs(game.Workspace.Fields:GetChildren()) do
   table.insert(fields,tostring(v))
-  print(v)
 end
 Section1:CreateDropdown("Seclect Feilds ", {
    List = fields,
