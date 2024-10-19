@@ -6,8 +6,8 @@ local Page2 = windowz:CreatePage("Main")
 local field = "Blackberry Field"
 local Section1 = Page2:CreateSection("Farm")
 Section1:CreateToggle("Farming", {Toggled=false , Description = false}, function(Value)
+    if not Value then game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Stopped" end
 while Value do
-game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "work?"
 function farm()
   repeat
       local plrmag = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
@@ -16,7 +16,7 @@ if (plrmag-fieldmag).magnitude >100 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
             game.Workspace.Fields[field].FieldZone.CFrame
 end
-    local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "farming"
+    local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
         for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do            wait(.05)
             if v:WaitForChild("TokenName", 0.1) then
                 local name = v:WaitForChild("TokenName", 0.1).Value
@@ -46,7 +46,7 @@ end
       until tonumber(num1) >= tonumber(num2)
 end
 farm()
-game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "full"
+game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Full"
 wait(6)
     for i, v in pairs(game.Workspace.Hives:GetChildren()) do
         if v.Platform.Top.Username.User.Text == "kegietong" then
@@ -64,7 +64,7 @@ wait(6)
         num1 = num1:gsub(",", "")
         num2 = num2:gsub(",", "")
     until tonumber(num1) == 0
-game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "empty"
+game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Empty"
 wait(1)
 end
 
@@ -83,7 +83,7 @@ end)
 local Section2 = Page2:CreateSection("Quest")
 local Page2 = windowz:CreatePage("Misc")
 local Section1 = Page2:CreateSection("Save Memory")
-Section1:CreateButton("Button Example", function ()
+Section1:CreateButton("Clear Map", function ()
 game.AreaBarriers:Destroy()
 game.Doors:Destroy()
 game.Map.Deseart:Destroy()
@@ -95,43 +95,43 @@ game.Map.Folder:Destroy()
 game.Folderd:Destroy()
 end)
 
-Section1:CreateSlider("Slider Example", {Min = 16, Max = 500, DefaultValue = 30}, function(Value)
-   print(Value)
-end)
+-- Section1:CreateSlider("Slider Example", {Min = 16, Max = 500, DefaultValue = 30}, function(Value)
+--    print(Value)
+-- end)
 
-Section1:CreateToggle("Toggle Example", {Toggled=false , Description = false}, function(Value)
-   print(Value)
-end)
+-- Section1:CreateToggle("Toggle Example", {Toggled=false , Description = false}, function(Value)
+--    print(Value)
+-- end)
 
-Section1:CreateButton("Button Example", function ()
-   print("Button Cliked!")
-end)
+-- Section1:CreateButton("Button Example", function ()
+--    print("Button Cliked!")
+-- end)
 
-Section1:CreateTextbox("TextBox", false, function (vv)
-   print(vv)
-end)
+-- Section1:CreateTextbox("TextBox", false, function (vv)
+--    print(vv)
+-- end)
 
-Section1:CreateDropdown("Dropdown ", {
-   List = {"Value1", "Value2", "Value3", "Value4"},
-   Default = "None"}, function(value)
-       print(value)
-end)
+-- Section1:CreateDropdown("Dropdown ", {
+--    List = {"Value1", "Value2", "Value3", "Value4"},
+--    Default = "None"}, function(value)
+--        print(value)
+-- end)
 
-Section1:CreateColorPicker("Color Picker", Color3.fromRGB(255, 255, 255), function ()
-   print("fsf")
-end)
+-- Section1:CreateColorPicker("Color Picker", Color3.fromRGB(255, 255, 255), function ()
+--    print("fsf")
+-- end)
 
-local dropdown = Section1:CreateDropdown("Refresh Dropdown ", {
-   List = {"Value1", "Value2", "Value3", "Value4"},
-   Default = "None"}, function(value)
-       print(value)
-end)
+-- local dropdown = Section1:CreateDropdown("Refresh Dropdown ", {
+--    List = {"Value1", "Value2", "Value3", "Value4"},
+--    Default = "None"}, function(value)
+--        print(value)
+-- end)
 
 
 
-Section1:CreateButton("Refresh Example", function ()
-   local newlist = {"resf", "uwua", "fsk"}
-   dropdown:Clear()
-   wait(1)
-   dropdown:Add(newlist)
-end)
+-- Section1:CreateButton("Refresh Example", function ()
+--    local newlist = {"resf", "uwua", "fsk"}
+--    dropdown:Clear()
+--    wait(1)
+--    dropdown:Add(newlist)
+-- end)
