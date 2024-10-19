@@ -16,9 +16,11 @@ if (plrmag-fieldmag).magnitude >100 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
             game.Workspace.Fields[field].FieldZone.CFrame
 end
-    local turn = 0    while turn < 10 do   
+    local turn = 0    
+                    while turn < 10 do   
                         turn = turn + 1     
                         wait()     
+                        print("f")
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
                              local tool = player.Character:FindFirstChildOfClass("Tool")
     local clickEvent = tool:FindFirstChild("ClickEvent", true)
