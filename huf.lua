@@ -23,7 +23,7 @@ end
                         wait()     
                         print("f")
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
-                             local tool = player.Character:FindFirstChildOfClass("Tool")
+                             local tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
     local clickEvent = tool:FindFirstChild("ClickEvent", true)
                     if clickEvent then
                         clickEvent:FireServer()
