@@ -18,14 +18,14 @@ if (plrmag-fieldmag).magnitude >100 then
 end
     local turn = 0    while turn < 10 do   
                         turn = turn + 1     
-                        wait(1)     
+                        wait()     
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
-for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
-     local tool = player.Character:FindFirstChildOfClass("Tool")
+                             local tool = player.Character:FindFirstChildOfClass("Tool")
     local clickEvent = tool:FindFirstChild("ClickEvent", true)
                     if clickEvent then
                         clickEvent:FireServer()
                     end
+for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) -- End touch
 end
@@ -38,7 +38,7 @@ end
     local num1, num2 = num:match("([^/]+)/([^/]+)")
     num1 = num1:gsub(",", "")
     num2 = num2:gsub(",", "")
-    wait(1)
+    wait()
                     print(num1)
       until tonumber(num1) >= tonumber(num2)
 end
@@ -54,7 +54,7 @@ wait(6)
     game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
 
     repeat
-        wait(2)
+        wait()
       game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
     local num = game.Players.LocalPlayer.PlayerGui.Main.MeterHUD.PollenMeter.Label.Text
         local num1, num2 = num:match("([^/]+)/([^/]+)")
