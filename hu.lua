@@ -48,7 +48,7 @@ end
 end
 farm()
 game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Full"
-wait(6)
+wait()
     for i, v in pairs(game.Workspace.Hives:GetChildren()) do
         if v.Platform.Top.Username.User.Text == "kegietong" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
