@@ -27,6 +27,7 @@ end
                     end
 for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
+                            print("getting")
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) -- End touch
 end
 
