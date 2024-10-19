@@ -1,5 +1,5 @@
 local uilibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiet1308/tvkhub/main/rac"))()
-local windowz = uilibrary:CreateWindow("UI Library", "BangLaptop", true)
+local windowz = uilibrary:CreateWindow("", "BangLaptop", true)
 
 local Page1 = windowz:CreatePage("Home")
 local Page2 = windowz:CreatePage("Main")
@@ -17,26 +17,20 @@ if (plrmag-fieldmag).magnitude >100 then
             game.Workspace.Fields[field].FieldZone.CFrame
 end
     local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
-        for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do            wait(.05)
-            if v:WaitForChild("TokenName", 0.1) then
-                local name = v:WaitForChild("TokenName", 0.1).Value
-            game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool").ToolRemote:FireServer(true)
-                if v.Name == "All" and name ~= "Honey" and name ~= "Royal Jelly" and name ~= "Treat" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                    wait()
-                    game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "prior item free"
-                end
-                if v.Name == "kegietong" and name == "TokenLink" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                    wait()
-                    game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "prior tokenlink"
-                end
-                if v.Name == "kegietong" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                    wait()
-                end
-            end
-        end end
+
+for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
+     local tool = player.Character:FindFirstChildOfClass("Tool")
+    local clickEvent = tool:FindFirstChild("ClickEvent", true)
+                    if clickEvent then
+                        clickEvent:FireServer()
+                    end
+    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
+    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) -- End touch
+end
+
+
+
+ end
 
     local num = game.Players.LocalPlayer.PlayerGui.Main.MeterHUD.PollenMeter.Label.Text
     local num1, num2 = num:match("([^/]+)/([^/]+)")
@@ -93,7 +87,8 @@ game.Map.Grass:Destroy()
 game.Map.Fence:Destroy()
 game.Map.Folder:Destroy()
 game.Folderd:Destroy()
-end)
+end) 
+
 
 -- Section1:CreateSlider("Slider Example", {Min = 16, Max = 500, DefaultValue = 30}, function(Value)
 --    print(Value)
