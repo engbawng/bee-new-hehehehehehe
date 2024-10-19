@@ -71,9 +71,12 @@ end
 
     
 end)
-
+local fields ={}
+for i,v in pairs(game.Workspace.Fields:GetChildren()) do
+  table.insert(fields, i, v)
+end
 Section1:CreateDropdown("Seclect Feilds ", {
-   List = game.Workspace.Fields:GetChildren(),
+   List = fields,
    Default = "Blackberry"}, function(value)
        field = value
 end)
