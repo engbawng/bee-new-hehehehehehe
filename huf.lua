@@ -10,6 +10,7 @@ Section1:CreateToggle("Farming", {Toggled=false , Description = false}, function
 while Value do
 function farm()
   repeat
+                    print("h")
       local plrmag = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 local fieldmag = game.Workspace.Fields[field].FieldZone.Position
 if (plrmag-fieldmag).magnitude >100 then
