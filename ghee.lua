@@ -10,10 +10,10 @@ if (plrmag-fieldmag).magnitude >100 then
             game.Workspace.Fields[field].FieldZone.CFrame
 end
     local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "farming"
-        game:GetService("Players").LocalPlayer.Character.Shovel.ToolRemote:FireServer(true)
         for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do            wait(.05)
             if v:WaitForChild("TokenName", 0.1) then
                 local name = v:WaitForChild("TokenName", 0.1).Value
+            game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool").ToolRemote:FireServer(true)
                 if v.Name == "All" and name ~= "Honey" and name ~= "Royal Jelly" and name ~= "Treat" then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
                     wait()
