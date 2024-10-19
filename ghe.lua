@@ -7,7 +7,7 @@ function farm()
 local fieldmag = game.Workspace.Fields[field].FieldBox.Position
 if (plrmag-fieldmag).magnitude >100 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
-            game.Workspace.Fields[field].FieldBox.CFrame
+            game.Workspace.Fields[field].FieldZone.CFrame
 end
     local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "farming"
         game:GetService("Players").LocalPlayer.Character.Shovel.ToolRemote:FireServer(true)
