@@ -52,7 +52,7 @@ wait(6)
     repeat
         wait(2)
       game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
-        local num = game.Players.LocalPlayer.PlayerGui.Main.MeterHUD.PollenMeter.Bar.TextLabel.Text
+    local num = game.Players.LocalPlayer.PlayerGui.Main.MeterHUD.PollenMeter.Label.Text
         local num1, num2 = num:match("([^/]+)/([^/]+)")
         num1 = num1:gsub(",", "")
         num2 = num2:gsub(",", "")
