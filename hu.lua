@@ -73,7 +73,8 @@ end
 end)
 local fields ={}
 for i,v in pairs(game.Workspace.Fields:GetChildren()) do
-  table.insert(fields, i, v)
+  table.insert(fields, v)
+  print(v)
 end
 Section1:CreateDropdown("Seclect Feilds ", {
    List = fields,
