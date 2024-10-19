@@ -16,8 +16,10 @@ if (plrmag-fieldmag).magnitude >100 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
             game.Workspace.Fields[field].FieldZone.CFrame
 end
-    local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
-
+    local turn = 0    while turn < 10 do   
+                        turn = turn + 1     
+                        wait(1)     
+     game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
 for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
      local tool = player.Character:FindFirstChildOfClass("Tool")
     local clickEvent = tool:FindFirstChild("ClickEvent", true)
@@ -37,6 +39,7 @@ end
     num1 = num1:gsub(",", "")
     num2 = num2:gsub(",", "")
     wait(1)
+                    print(num1)
       until tonumber(num1) >= tonumber(num2)
 end
 farm()
