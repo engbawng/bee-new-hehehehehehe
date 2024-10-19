@@ -1,7 +1,14 @@
+while true do
 local field = "Blackberry Field"
 game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "work?"
 function farm()
   repeat
+      local plrmag = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local fieldmag = game.Workspace.Fields[field].FieldBox.Position
+if (plrmag-fieldmag).magnitude >100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+            game.Workspace.Fields[field].FieldBox.CFrame
+end
     local turn = 0    while turn < 10 do        turn = turn + 1        wait(1)        game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "farming"
         game:GetService("Players").LocalPlayer.Character.Shovel.ToolRemote:FireServer(true)
         for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do            wait(.05)
@@ -42,3 +49,14 @@ wait(6)
     end
     game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
 
+    repeat
+        wait(2)
+      game.ReplicatedStorage.Remotes.MakeHoney:FireServer("")
+        local num = game.Players.LocalPlayer.PlayerGui.Main.MeterHUD.PollenMeter.Bar.TextLabel.Text
+        local num1, num2 = num:match("([^/]+)/([^/]+)")
+        num1 = num1:gsub(",", "")
+        num2 = num2:gsub(",", "")
+    until tonumber(num1) == 0
+game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "empty"
+wait(1)
+end
