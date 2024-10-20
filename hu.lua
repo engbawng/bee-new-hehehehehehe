@@ -20,11 +20,12 @@ end
     local turn = 0    
                     while turn < 10 do   
                         turn = turn + 1     
-                        wait()     
+                        wait(.1)     
                         --print("f")
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
 for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
+                            wait(.1)
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0) -- End touch
 end
 
