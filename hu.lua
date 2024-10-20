@@ -10,7 +10,7 @@ Section1:CreateToggle("Farming", {Toggled=false , Description = false}, function
 while Value do
 function farm()
   repeat
-                    print("h")
+                 --   print("h")
       local plrmag = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 local fieldmag = game.Workspace.Fields[field].FieldZone.Position
 if (plrmag-fieldmag).magnitude >100 then
@@ -21,7 +21,7 @@ end
                     while turn < 10 do   
                         turn = turn + 1     
                         wait()     
-                        print("f")
+                        --print("f")
      game.Players.LocalPlayer.PlayerGui.Main.ShopFrame.Prefix.Text = "Farming"
 for i, v in pairs(game.Workspace.Debris.Tokens:GetChildren()) do  
     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1) -- Simulate touching
@@ -37,7 +37,7 @@ end
     num1 = num1:gsub(",", "")
     num2 = num2:gsub(",", "")
     wait()
-                    print(num1)
+               --     print(num1)
       until tonumber(num1) >= tonumber(num2)
 end
 farm()
